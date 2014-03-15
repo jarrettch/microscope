@@ -16,4 +16,5 @@ postsData = [
   }
 ]
 
-Template.postsList.helpers posts: postsData
+Template.postsList.helpers posts: ->
+  Posts.find()
