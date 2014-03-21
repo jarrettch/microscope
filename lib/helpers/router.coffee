@@ -1,4 +1,9 @@
-Router.configure layoutTemplate: 'layout'
+Router.configure
+  layoutTemplate: 'layout',
+  loadingTemplate: 'loading',
+  waitOn: ->
+    Meteor.subscribe 'posts'
 
 Router.map ->
-  this.route 'postsList', path: '/'
+  @route 'postsList',
+  path: '/'
